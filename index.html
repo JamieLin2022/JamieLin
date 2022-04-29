@@ -1,1 +1,212 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+<style>
+    *{
+        box-sizing: border-box;
+        margin: 0;  
+        padding:0;
+        /* 為什麼margin: auto 有用? */
+        /* 要用margin: 0 還是 margin: auto? */
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    /* header */
+    .container1{
+        display: flex;
+        justify-content: space-between;
+        height: 250px;
+        background-color: black;
+        align-items: center;
+        padding: 100px;
+    }
+    .cart ul{
+        display: flex;
+        justify-content: space-between;
+    }
+    ul li{
+        font-size: 3vw;
+        list-style-type: none;
+        
+    }
+    li a{
+        text-decoration: none;
+        color: white;
+        padding: 20px;
+    }
+    li a:hover{
+        color: pink;
+    }
+
+    /* navigation */
+    .nav{
+        height: 80px;
+        background-color: gray;
+        text-align: center;
+        /* text-align:center 沒有用? */
+        /* margin-top: 0; */
+        /* margin-top: auto; */
+        /* 為什麼margin-top 不是放這裡? */
+    }
+    .nav ul{
+        margin-top: auto;
+        /* ul是DIV元素嗎? 為什麼height 跟 background-color可以放這裡? */
+        /* height: 100px;
+        background-color: gray; */
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    /* history */
+    .container2{
+        height: 600px;
+        background-color: white;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        border-bottom: 1px black solid;
+    }
+    .historytext{
+        padding: 50px;
+        text-align: center;
+        line-height: 20px;
+        letter-spacing: 5px;
+        
+    }
+    .historyimg{
+        padding: 50px;
+    }
+    .insidehistoryimg{
+        max-width: 100%;
+        max-height: 100%;
+    }
+    /* products */
+    .productHeader{
+        text-align: center;
+        padding: 80px;
+    }
+    .container3{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        /* padding:; */
+        /* height: 600px; */
+        /* background-color: gray; */
+        background-color: white;
+    }
+    .container3-item{
+        width: 20%;
+   }
+    .imageContainer{
+        height: 300px;
+        display: flex;
+    }
+    .productDescription{
+        text-align: center;
+        padding: 10px;
+    }
+    .image{
+        object-fit: cover;
+    }
+    /* footer */
+    .footer{
+        background-color: black;
+        height: 150px;
+        text-align: center;
+        padding: 50px;
+        color: white;
+    }
+</style>
+<body>
+    <!-- header -->
+    <header class="container1">
+        <div>
+            <a href="index.html"><img src="images/kiehlsLogo.png" alt=""></a>
+        </div>
+        <div class="cart">
+            <ul>
+                <li><a href="">購物車</a></li>
+                <li><a href="">訂單查詢</a></li>
+                <li><a href="">加入會員</a></li>
+            </ul>
+        </div>
+    </header>
+    <!-- Navigation -->
+    <nav class="nav">
+        <ul>
+            <!-- 怎麼讓字全部置中? -->
+            <li><a href="history.html">關於契爾式</a></li>
+            <li><a href="">頭髮保養</a></li>
+            <li><a href="">身體與其他</a></li>
+            <li><a href="">明星商品</a></li>
+        </ul>
+    </nav>
+    <!-- carousel -->
+    <div id="carouselExampleControls" class="carousel slide carouselclass" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/1.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/0729_KIE_KV-2.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="images/CCDS_KV_2022.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <!-- history -->
+      <div class="container2 container-fluid">
+        <div class="historytext row align-items-center">
+            <div class="col-12 col-sm-12 col-md-6">
+            <h1>品牌精神: 完整揭露產品成份</h1><br>
+            <p>為了協助顧客更了解產品並做出正確的購買決策，Kiehl’s契爾氏於1924年自主將產品全成分標示在外包裝上。此舉不僅早於美國政府規定的時間，更成為全世界第一間標示全成份的保養品公司，Kiehl’s契爾氏以此為傲，將其納入品牌精神之中，時至今日，Kiehl’s契爾氏依然堅持在品牌產品瓶身上清楚標示成份以供消費者查看。</p>
+            </div>
+            <div class="historyimg col-12 col-sm-12 col-md-6"><img class="insidehistory" src="images/history.jpg" alt=""></div>
+        </div>
+        
+      </div>
+      <!-- products -->
+      <div class="productHeader container-fluid"><h1>我們的明星商品</h1></div>
+      <div class="container3 row">
+          <div class="container3-item col-12 col-sm-6 col-md-3 img-thumbnail">
+              <div class="imageContainer"><img class="img-fluid image" src="images/product1.jpg" alt=""></div>
+              <div class="productDescription"><br><h2>11kDa超導全能修護露 </h2></div>
+              <!-- 如何加入一長串說明文字卻不影響排版? -->
+          </div>
+          <div class="container3-item col-12 col-sm-6 col-md-3 img-thumbnail">
+            <div class="imageContainer"><img class="img-fluid image" src="images/product2.jpg" alt=""></div>
+            <div class="productDescription"><br><h2>激光極淨白淡斑精華 </h2></div>
+          </div>
+          <div class="container3-item col-12 col-sm-6 col-md-3 img-thumbnail">
+            <div class="imageContainer"><img class="img-fluid image" src="images/product3.jpg" alt=""></div>
+            <div class="productDescription"><br><h2>超能雙C精華精華液 </h2></div>
+          </div>
+          <div class="container3-item col-12 col-sm-6 col-md-3 img-thumbnail">
+            <div class="imageContainer"><img class="img-fluid image" src="images/product4.jpg" alt=""></div>
+            <div class="productDescription"><br><h2>植萃藍鑽修護激萃 </h2></div>
+          </div>
+      </div>
+      <!-- footer -->
+      <footer class="footer">
+        2022 copyright @ Kiehl's
+      </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>

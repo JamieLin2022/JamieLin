@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>history</title>
+  </head>
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+    crossorigin="anonymous"
+  />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      max-width: 100%;
+      /* 為什麼margin: auto 有用? */
+      /* 要用margin: 0 還是 margin: auto? */
+    }
+    /* header */
+    .container1 {
+      display: flex;
+      justify-content: space-between;
+      height: 250px;
+      background-color: black;
+      align-items: center;
+      padding: 100px;
+    }
+    .cart ul {
+      display: flex;
+      justify-content: space-between;
+    }
+    ul li {
+      font-size: 1.5rem;
+      list-style-type: none;
+    }
+    li a {
+      text-decoration: none;
+      color: white;
+      padding: 20px;
+    }
+    li a:hover {
+      color: pink;
+    }
+
+    /* navigation */
+    .nav {
+      height: 80px;
+      background-color: gray;
+      text-align: center;
+      /* text-align:center 沒有用? */
+      /* margin-top: 0; */
+      /* margin-top: auto; */
+      /* 為什麼margin-top 不是放這裡? */
+    }
+    .nav ul {
+      margin-top: auto;
+      /* ul是DIV元素嗎? 為什麼height 跟 background-color可以放這裡? */
+      /* height: 100px;
+        background-color: gray; */
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    /* history */
+    .historybanner {
+      display: flex;
+    }
+    .container2 {
+      height: 600px;
+      background-color: white;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      border-bottom: 1px black solid;
+      /* max-width: 100%; */
+    }
+    .historytext {
+      /* padding: 80px; */
+      text-align: center;
+      line-height: 20px;
+      letter-spacing: 5px;
+    }
+    .historyimg {
+      padding: 50px;
+      width: 600px;
+      
+    }
+    .insidehistoryimg {
+      max-width: 100%;
+      max-height: 100%;
+      
+    }
+    /* footer */
+    .footer {
+      background-color: black;
+      height: 150px;
+      text-align: center;
+      padding: 50px;
+      color: white;
+    }
+  </style>
+  <body>
+    <!-- header -->
+    <header class="container1">
+      <div>
+        <a href="index.html"><img src="images/kiehlsLogo.png" alt="" /></a>
+      </div>
+      <div class="cart">
+        <ul>
+          <li><a href="">購物車</a></li>
+          <li><a href="">訂單查詢</a></li>
+          <li><a href="">加入會員</a></li>
+        </ul>
+      </div>
+    </header>
+    <!-- Navigation -->
+    <nav class="nav">
+      <ul>
+        <!-- 怎麼讓字全部置中? -->
+        <li><a href="history.html">關於契爾式</a></li>
+        <li><a href="">頭髮保養</a></li>
+        <li><a href="">身體與其他</a></li>
+        <li><a href="">明星商品</a></li>
+      </ul>
+    </nav>
+    <!-- history -->
+    <div class="historybanner">
+      <img src="images/historybanner.jpg" alt="" />
+      <!-- 圖片不會跟大小一起縮放? -->
+    </div>
+
+    <!-- 1 -->
+    <div class="container2 container-fluid">
+      <div class="historytext row align-items-center ps-5">
+        <div class="col-12 col-sm-12 col-md-6">
+          <h1>專業藥房起家</h1>
+          <br />
+          <p>
+            1851年在紐約東村第13街與第三大道的轉角，Kiehl’s契爾氏的前身-專業藥房在此開幕，為紐約顧客提供保健服務。
+          </p>
+        </div>
+        <figure class="historyimg col-12 col-sm-12 col-md-6">
+          <img class="insidehistoryimg" src="images/history1.jpg" alt="" />
+        </figure>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="container2 container-fluid">
+      <div class="historytext row align-items-center ps-5">
+        <figure class="historyimg col-12 col-sm-12 col-md-6">
+          <img class="insidehistoryimg ps-5" src="images/history2.jpg" alt="" />
+        </figure>
+        <div class="historytext col-12 col-sm-12 col-md-6">
+          <h1>創辦人JOHN KIEHL加入</h1>
+          <br />
+          <p>
+            1894年，專業藥劑師John Kiehl加入這間藥局並成為學徒，之後John
+            Kiehl便買下藥局，並開始以「Kiehl Pharmacy」店名營業，提供專業服務。”
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="container2 container-fluid">
+      <div class="historytext row align-items-center ps-5 text-center" >
+        <div class="col-12 col-sm-12 col-md-6">
+          <h1>KIEHL’S第一個保養產品</h1>
+          <br />
+          <p>
+            其後，John Kiehl的學徒Irving
+            Morse接掌藥局事務，並將其擴展成全方位的藥局，不僅販售茶葉、藥草、蜂蜜、處方藥等產品，並融合美容、醫學、草本與醫學等專業知識，推出第一批以Kiehl’s契爾氏為品的保養產品，其中包括直到現在依然暢銷的「原．麝香淡香水」。
+          </p>
+        </div>
+        <figure class="historyimg col-12 col-sm-12 col-md-6">
+          <img class="insidehistoryimg" src="images/history3.jpg" alt="" />
+        </figure>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="container2 container-fluid">
+      <div class="historytext row align-items-center ps-5">
+        <figure class="historyimg col-12 col-sm-12 col-md-6">
+          <img class="insidehistoryimg" src="images/history4.jpg" alt="" />
+        </figure>
+        <div class="historytext col-12 col-sm-12 col-md-6">
+          <h1>品牌精神: TRY BEFORE YOU BUY</h1>
+          <br />
+          <p>
+            Irving Morse定調「TRY BEFORE YOU BUY(先試用再購買)」為Kiehl
+            Pharmacy藥局的服務宗旨，不僅給予個人化的專業諮詢服務，並慷慨提供的產品試用，確保顧客購買的產品符合期待與需求。此舉廣泛獲得顧客的好評，此服務宗旨後來也成為Kiehl’s契爾氏的品牌精神並一路延續至今。
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer class="footer">2022 copyright @ Kiehl's</footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
